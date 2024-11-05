@@ -1,43 +1,39 @@
 package estacionamento;
 
-public class Veiculo {
+class Veiculo {
     private String placa;
     private String modelo;
-    private int tamanho;
-    private long horaEntrada;
-    private long horaSaida;
-    
-    public Veiculo(String placa, String modelo, int tamanho) {
+    private String tamanho;
+    private String horaEntrada;
+    private String horaSaida;
+
+    public Veiculo(String placa, String modelo, String tamanho) {
         this.placa = placa;
         this.modelo = modelo;
         this.tamanho = tamanho;
     }
-    
+
     public String getPlaca() {
         return placa;
     }
-    
-    public int getTamanho() {
+
+    public String getTamanho() {
         return tamanho;
     }
-    
-    public long getHoraEntrada() {
-        return horaEntrada;
-    }
-    
-    public void setHoraEntrada(long horaEntrada) {
+
+    public void setHoraEntrada(String horaEntrada) {
         this.horaEntrada = horaEntrada;
     }
-    
-    public long getHoraSaida() {
-        return horaSaida;
+
+    public String getHoraEntrada() {
+        return horaEntrada;
     }
-    
-    public void setHoraSaida(long horaSaida) {
+
+    public void setHoraSaida(String horaSaida) {
         this.horaSaida = horaSaida;
     }
-    
-    public long getTempoPermanencia() {
-        return (horaSaida - horaEntrada) / 60000;
+
+    public String getHoraSaida() {
+        return horaSaida;
     }
 }

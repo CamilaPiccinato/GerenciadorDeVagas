@@ -1,33 +1,29 @@
 package estacionamento;
 
-public class Vaga {
+class Vaga {
     private int numero;
-    private int tamanho;
+    private String tamanho;
     private boolean disponivel;
-    
-    public Vaga(int numero, int tamanho, boolean disponivel) {
+
+    public Vaga(int numero, String tamanho) {
         this.numero = numero;
         this.tamanho = tamanho;
-        this.disponivel = disponivel;
+        this.disponivel = true; // Vaga é inicialmente disponível
     }
-    
+
     public int getNumero() {
         return numero;
     }
 
-    public int getTamanho() {
+    public String getTamanho() {
         return tamanho;
     }
 
     public boolean isDisponivel() {
         return disponivel;
     }
-    
-    public void ocupar() {
-        this.disponivel = false;
-    }
-    
-    public void liberar() {
-        this.disponivel = true;
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
     }
 }
